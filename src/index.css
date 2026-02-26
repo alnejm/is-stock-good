@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #064e3b; /* Emerald 900 */
+  --color-accent: #10b981; /* Emerald 500 */
+  --color-bg: #f8fafc; /* Slate 50 */
+  --color-card: #ffffff;
+  --color-border: #e2e8f0; /* Slate 200 */
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-slate-900 font-sans antialiased;
+    direction: rtl;
+  }
+  
+  .num-en {
+    font-variant-numeric: tabular-nums;
+    direction: ltr;
+    display: inline-block;
+  }
+}
+
+.ai-summary-text {
+  @apply whitespace-pre-line leading-relaxed;
+}
+
+.glass-card {
+  @apply bg-white border border-border shadow-[0_1px_3px_rgba(0,0,0,0.05)] rounded-2xl transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply shadow-[0_8px_30px_rgb(0,0,0,0.04)] border-zinc-300;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-primary/20 hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2;
+}
+
+.input-field {
+  @apply w-full p-3.5 rounded-xl border border-border bg-zinc-50/50 focus:bg-white focus:ring-2 focus:ring-accent/10 focus:border-accent outline-none transition-all;
+}

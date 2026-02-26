@@ -1,0 +1,8 @@
+{
+  "name": "EGX Trading Journal",
+  "description": "تطبيق احترافي لتسجيل وتحليل صفقات التداول في البورصة المصرية مع تحليلات متقدمة ودعم للذكاء الاصطناعي.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
